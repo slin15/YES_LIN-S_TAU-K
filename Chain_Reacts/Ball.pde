@@ -34,8 +34,8 @@ void move() {
 }
 
 void oneOf() {
-  int opX = (int) random(4);
-  int opY = (int) random(4);
+  int opX = (int) random(2);
+  int opY = (int) random(2);
   if (opX == 1)
     x += speed;
   else if (opX == 2)
