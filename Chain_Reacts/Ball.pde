@@ -14,17 +14,23 @@ Ball() {
 }
 
 void move() {
-  if (x+10 >= 600) {
-    x -= speed; }
-  else if (x-10 <= 0) {
-    x += speed; }
-  else if (y+10 >= 600) {
-    y -= speed; }
-  else if (y-10 <= 600) {
-    y += speed; }
-  else {
-    oneOf();
+ if(x > width) {
+    x = width;
+    speed = -speed;
   }
+  if(y > height) {
+    y = height;
+    speed = -speed;
+  }
+  if(x < 0) {
+    x = 0;
+    speed = -speed;
+  }
+  if(y < 0) {
+    y = 0;
+    speed = -speed;
+  }
+  oneOf(); 
 }
 
 void oneOf() {
